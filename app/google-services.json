@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "938349776686",
+    "project_id": "code-m8",
+    "storage_bucket": "code-m8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:938349776686:android:c3b619559b08f47cf5b4bf",
+        "android_client_info": {
+          "package_name": "in.buildbytes.codem8"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCls4bKH5rfz5u9xkxqzRN7PWO_VUhcIM0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
