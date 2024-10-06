@@ -1,6 +1,7 @@
 package in.buildbytes.codem8;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -35,6 +36,10 @@ public class Register extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            getWindow().setStatusBarColor(getResources().getColor(R.color.white));
+            getWindow().setNavigationBarColor(getResources().getColor(R.color.bg)); // Set the navigation bar color
+        }
         button=findViewById(R.id.button);
         login=findViewById(R.id.login);
         auth = FirebaseAuth.getInstance();
@@ -61,6 +66,7 @@ public class Register extends AppCompatActivity {
             public void onClick(View V){
                 Intent i = new Intent(Register.this, Login.class);
                 startActivity(i);
+                finish();
             }
         });
     }

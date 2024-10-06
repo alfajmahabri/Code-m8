@@ -1,6 +1,7 @@
 package in.buildbytes.codem8;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -31,6 +32,10 @@ public class Login extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            getWindow().setStatusBarColor(getResources().getColor(R.color.white));
+            getWindow().setNavigationBarColor(getResources().getColor(R.color.bg)); // Set the navigation bar color
+        }
         auth = FirebaseAuth.getInstance();
         EmailAddress=findViewById(R.id.EmailAddress);
         Password=findViewById(R.id.Password);
@@ -49,6 +54,7 @@ public class Login extends AppCompatActivity {
                                 Intent intent = new Intent(Login.this, Dashboard.class);
                                 intent.putExtra("EMAIL", user);
                                 startActivity(intent);
+                                finish();
                             }
                         });
             }
