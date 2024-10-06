@@ -24,13 +24,13 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center_vertical"
-            android:drawableStart="@drawable/baseline_account_circle_24"
             android:drawablePadding="10dp"
             android:paddingStart="10dp"
             android:paddingEnd="20dp"
             android:gravity="center_vertical"
             android:text="email"
-            android:textColor="@color/fontcol" />
+            android:textColor="@color/fontcol"
+            app:drawableStartCompat="@drawable/baseline_account_circle_24" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -77,36 +77,54 @@
             android:layout_height="match_parent"
             android:textColor="@color/fontcol"
             />
+
     </androidx.cardview.widget.CardView>
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_alignParentBottom = "true"
-        android:layout_alignParentRight = "true"
-        android:layout_margin = "16dp"
-        android:src = "@drawable/baseline_assistant_24"
-        android:clickable="true"
-        android:focusable="true"
-        android:backgroundTint="@color/bg"/>
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab_option1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/mainbtn"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="100dp"
-        android:visibility="gone"
-        android:src="@color/black" />
+        android:layout_alignParentBottom="true"
+        app:fabSize="auto"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="@color/white"
+        android:contentDescription="MAIN BTN"
+        android:src="@drawable/baseline_assistant_24"
+        android:tint="@color/white"
+        />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab_option2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/posting"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="180dp"
+        android:layout_above="@id/mainbtn"
+        android:layout_marginEnd="30dp"
+        app:fabSize="auto"
         android:visibility="gone"
-        android:src="@color/black" />
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/white"
+        android:contentDescription="posting"
+        android:src="@drawable/baseline_add_24"
+        android:tint="@color/white"
+        />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/manage"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@id/posting"
+        android:layout_marginEnd="30dp"
+        app:fabSize="auto"
+        android:visibility="gone"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/white"
+        android:contentDescription="Manage Hackathon"
+        android:src="@drawable/baseline_edit_24"
+        android:tint="@color/white"
+        />
+
+
 
 </RelativeLayout>
