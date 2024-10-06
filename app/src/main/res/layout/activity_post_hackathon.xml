@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -7,42 +8,79 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:orientation="vertical"
-    tools:context=".PostHackathon"
-    >
+    android:padding="16dp"
+    tools:context=".PostHackathon">
 
-    <EditText
-        android:id="@+id/noh"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Enter Name of Hackathon" />
-
-    <EditText
-        android:id="@+id/venue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Enter Hackathon Venue" />
-
-    <EditText
-        android:id="@+id/event_date"
+    <!-- Name of Hackathon -->
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="date"
-        android:hint="Event date"/>
+        android:hint="Name of Hackathon"
+        app:boxStrokeColor="@color/bg"
+        app:boxStrokeWidth="2dp"
+        app:boxBackgroundMode="outline">
 
-    <EditText
-        android:id="@+id/teamcount"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/noh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Venue -->
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Enter size of Team"
-        android:inputType="numberSigned" />
+        android:hint="Hackathon Venue"
+        app:boxStrokeColor="@color/bg"
+        app:boxStrokeWidth="2dp"
+        app:boxBackgroundMode="outline">
 
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/venue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Event Date -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Event Date"
+        app:boxStrokeColor="@color/bg"
+        app:boxStrokeWidth="2dp"
+        app:boxBackgroundMode="outline">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/event_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="date"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Team Size -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Team Size"
+        app:boxStrokeColor="@color/bg"
+        app:boxStrokeWidth="2dp"
+        app:boxBackgroundMode="outline">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/teamcount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Submit Button -->
     <Button
         android:id="@+id/submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Submit" />
-
+        android:text="Submit"
+        android:layout_gravity="center"/>
 
 </LinearLayout>
