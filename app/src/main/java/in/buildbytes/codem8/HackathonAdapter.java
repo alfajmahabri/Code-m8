@@ -5,11 +5,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
+import android.content.Intent;
+import android.view.View;
+import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
+
+import android.content.Intent;
+import android.view.View;
+import android.widget.Button;
 
 public class HackathonAdapter extends RecyclerView.Adapter<HackathonAdapter.HackathonViewHolder> {
     private Context context;
@@ -31,9 +37,23 @@ public class HackathonAdapter extends RecyclerView.Adapter<HackathonAdapter.Hack
     public void onBindViewHolder(@NonNull HackathonViewHolder holder, int position) {
         DataClass hackathon = hackathonList.get(position);
         holder.name.setText(hackathon.getDataNoh());
-        holder.venue.setText("Venue: " +hackathon.getDataVenue());
-        holder.date.setText(String.valueOf("Date: " + hackathon.getData_date()));
-        holder.teamCount.setText(String.valueOf("Time Size: " + hackathon.getData_count()));
+        holder.venue.setText("Venue: " + hackathon.getDataVenue());
+        holder.date.setText("Date: " + hackathon.getData_date());
+        holder.teamCount.setText("Team Size: " + hackathon.getData_count());
+
+        // Set OnClickListener for the "View Details" button
+        holder.viewDetailsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Start a new activity with the selected hackathon data
+                Intent intent = new Intent(context, HackathonDetails.class);
+                intent.putExtra("hackathonName", hackathon.getDataNoh());
+                intent.putExtra("hackathonVenue", hackathon.getDataVenue());
+                intent.putExtra("hackathonDate", hackathon.getData_date());
+                intent.putExtra("hackathonTeamCount", hackathon.getData_count());
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -43,6 +63,7 @@ public class HackathonAdapter extends RecyclerView.Adapter<HackathonAdapter.Hack
 
     public static class HackathonViewHolder extends RecyclerView.ViewHolder {
         TextView name, venue, date, teamCount;
+        Button viewDetailsBtn;
 
         public HackathonViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -50,6 +71,7 @@ public class HackathonAdapter extends RecyclerView.Adapter<HackathonAdapter.Hack
             venue = itemView.findViewById(R.id.hackathon_venue);
             date = itemView.findViewById(R.id.hackathon_date);
             teamCount = itemView.findViewById(R.id.hackathon_teamcount);
+            viewDetailsBtn = itemView.findViewById(R.id.view_details_btn);
         }
     }
 }

@@ -1,5 +1,6 @@
 package in.buildbytes.codem8;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.widget.Button;
@@ -66,6 +67,9 @@ public class PostHackathon extends AppCompatActivity {
                         .addOnSuccessListener(aVoid -> {
                             // Data successfully written
                             Toast.makeText(PostHackathon.this, "Hackathon submitted successfully!", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(PostHackathon.this, Dashboard.class);
+                            startActivity(intent);
+                            finish();
                         })
                         .addOnFailureListener(e -> {
                             // Data write failed

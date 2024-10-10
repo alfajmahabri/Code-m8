@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:padding="10dp"
     android:layout_margin="10dp"
     android:layout_marginBottom="10dp"
@@ -12,29 +12,61 @@
     android:clipChildren="false"
     >
 
-    <TextView
-        android:id="@+id/hackathon_name"
-        android:layout_width="wrap_content"
+    <!-- Left side: Hackathon information in a vertical layout -->
+    <LinearLayout
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Hackathon Name"
-        android:textStyle="bold"
-        android:textSize="16sp" />
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingEnd="10dp"
+        >
 
-    <TextView
-        android:id="@+id/hackathon_venue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Venue" />
+        <TextView
+            android:id="@+id/hackathon_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hackathon Name"
+            android:textStyle="bold"
+            android:textSize="16sp" />
 
-    <TextView
-        android:id="@+id/hackathon_date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Date" />
+        <TextView
+            android:id="@+id/hackathon_venue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Venue" />
 
-    <TextView
-        android:id="@+id/hackathon_teamcount"
+        <TextView
+            android:id="@+id/hackathon_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date" />
+
+        <TextView
+            android:id="@+id/hackathon_teamcount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Team Count" />
+    </LinearLayout>
+
+    <!-- Right side: Button in a vertical layout with center alignment -->
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Team Count" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        >
+
+        <Button
+            android:id="@+id/view_details_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View Details"
+            android:background="@drawable/button_border"
+            android:textColor="@color/white"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/bg"
+            android:padding="10dp" />
+
+    </LinearLayout>
+
 </LinearLayout>
