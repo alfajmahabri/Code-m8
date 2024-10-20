@@ -15,6 +15,7 @@ public class DataClass {
         this.dataVenue = dataVenue;
         this.data_count = data_count;
         this.data_date = data_date;
+
     }
 
     // Getter and Setter methods
