@@ -10,6 +10,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.SearchView;
 import android.widget.TextView;
@@ -26,6 +27,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -70,6 +73,7 @@ public class Dashboard extends AppCompatActivity {
         slideModels.add(new SlideModel(R.drawable.cmo, ScaleTypes.FIT));
         slideModels.add(new SlideModel(R.drawable.sli, ScaleTypes.FIT));
         imageSlider.setImageList(slideModels, ScaleTypes.FIT);
+        FirebaseApp.initializeApp(this);
 
         CardView searchbarCardView = findViewById(R.id.searchbar);
         final SearchView searchView = findViewById(R.id.searchView);
@@ -83,6 +87,14 @@ public class Dashboard extends AppCompatActivity {
             searchView.onActionViewExpanded();
             searchView.requestFocus();
         });
+
+        FirebaseAuth auth = FirebaseAuth.getInstance();
+        if (auth.getCurrentUser() != null) {
+            Log.d("Auth Status", "User is authenticated");
+        } else {
+            Log.d("Auth Status", "User is not authenticated");
+        }
+
 
         mainbtn.setOnClickListener(new View.OnClickListener() {
             @Override

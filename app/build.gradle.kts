@@ -55,5 +55,7 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
     implementation("com.github.denzcoskun:ImageSlideshow:0.1.0")
     implementation ("com.google.android.material:material:1.6.1")
+    implementation(platform("com.google.firebase:firebase-bom:33.4.0"))
+    implementation("com.google.firebase:firebase-analytics")
 
 }
