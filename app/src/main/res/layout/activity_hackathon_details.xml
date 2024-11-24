@@ -80,12 +80,48 @@
                 android:textSize="16sp"
                 android:layout_marginBottom="4dp"/>
 
-            <!-- Team Count -->
+            <!-- Team Leader -->
+            <TextView
+                android:id="@+id/leader_name_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Team Leader:"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginTop="12dp"
+                android:textColor="#616161"/>
+            <TextView
+                android:id="@+id/leader_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Leader Name"
+                android:textSize="16sp"
+                android:layout_marginBottom="4dp"/>
+
+            <!-- Current Team Count -->
+            <TextView
+                android:id="@+id/current_teamcount_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current Team Count:"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginTop="12dp"
+                android:textColor="#616161"/>
+            <TextView
+                android:id="@+id/current_teamcount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current Team Count"
+                android:textSize="16sp"
+                android:layout_marginBottom="4dp"/>
+
+            <!-- Total Team Count -->
             <TextView
                 android:id="@+id/hackathon_teamcount_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Team Size:"
+                android:text="Total Team Size:"
                 android:textStyle="bold"
                 android:textSize="16sp"
                 android:layout_marginTop="12dp"
@@ -97,6 +133,8 @@
                 android:text="Team Size"
                 android:textSize="16sp"
                 android:layout_marginBottom="4dp"/>
+
+            <!-- Connect Button -->
             <Button
                 android:id="@+id/connect_button"
                 android:layout_width="match_parent"

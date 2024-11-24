@@ -59,6 +59,37 @@
             android:inputType="date"/>
     </com.google.android.material.textfield.TextInputLayout>
 
+    <!-- Name of Leader -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name of Leader"
+        app:boxStrokeColor="@color/bg"
+        app:boxStrokeWidth="2dp"
+        app:boxBackgroundMode="outline">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/leader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Current Team Size"
+        app:boxStrokeColor="@color/bg"
+        app:boxStrokeWidth="2dp"
+        app:boxBackgroundMode="outline">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/currentteamcount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
     <!-- Team Size -->
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -76,11 +107,19 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <!-- Submit Button -->
+
     <Button
         android:id="@+id/submit"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Submit"
-        android:layout_gravity="center"/>
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="Connect"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/connect_button_selector"
+        android:paddingVertical="10dp"/>
+
+
 
 </LinearLayout>

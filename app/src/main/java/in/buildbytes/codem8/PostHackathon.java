@@ -16,7 +16,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class PostHackathon extends AppCompatActivity {
-    EditText noh, venue, eventdate, teamcount;
+    EditText noh, venue, eventdate, teamcount,leader,currentteamcount;
     Button upload;
     DatabaseReference databaseReference;
 
@@ -42,6 +42,8 @@ public class PostHackathon extends AppCompatActivity {
         eventdate = findViewById(R.id.event_date);
         teamcount = findViewById(R.id.teamcount);
         upload = findViewById(R.id.submit);
+        leader = findViewById(R.id.leader);
+        currentteamcount = findViewById(R.id.currentteamcount);
 
         // Set listener for the submit button
         upload.setOnClickListener(v -> {
@@ -49,16 +51,19 @@ public class PostHackathon extends AppCompatActivity {
             String hackathonName = noh.getText().toString();
             String hackathonVenue = venue.getText().toString();
             String hackathonDate = eventdate.getText().toString();
-            int teamSize;
+            String leaderName = leader.getText().toString();
+            int teamSize,currentTeamCount;
 
             try {
                 teamSize = Integer.parseInt(teamcount.getText().toString());
+                currentTeamCount = Integer.parseInt(currentteamcount.getText().toString());
             } catch (NumberFormatException e) {
                 teamSize = 0;  // Handle the case if input is not a number
+                currentTeamCount=0;
             }
 
             // Create a DataClass object
-            DataClass hackathon = new DataClass(hackathonName, hackathonVenue, teamSize, hackathonDate);
+            DataClass hackathon = new DataClass(hackathonName, hackathonVenue, teamSize, hackathonDate,leaderName,currentTeamCount);
 
             // Store the data in Firebase
             String hackathonId = databaseReference.push().getKey();  // Generate a unique key for each hackathon

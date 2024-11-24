@@ -2,21 +2,13 @@ package in.buildbytes.codem8;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class HackathonDetails extends AppCompatActivity {
-    private TextView hackathonName, hackathonVenue, hackathonDate, hackathonTeamCount;
-
+    private TextView hackathonName, hackathonVenue, hackathonDate, hackathonTeamCount, leaderNameTextView, currentTeamCountTextView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +18,8 @@ public class HackathonDetails extends AppCompatActivity {
         hackathonVenue = findViewById(R.id.hackathon_venue);
         hackathonDate = findViewById(R.id.hackathon_date);
         hackathonTeamCount = findViewById(R.id.hackathon_teamcount);
+        leaderNameTextView = findViewById(R.id.leader_name);
+        currentTeamCountTextView = findViewById(R.id.current_teamcount);
         Button connectButton = findViewById(R.id.connect_button);
 
         // Get data from the intent
@@ -33,13 +27,19 @@ public class HackathonDetails extends AppCompatActivity {
         String name = intent.getStringExtra("hackathonName");
         String venue = intent.getStringExtra("hackathonVenue");
         String date = intent.getStringExtra("hackathonDate");
-        String teamCount = intent.getStringExtra("hackathonTeamCount");
+        String leaderName = intent.getStringExtra("leaderName");
+        int currentTeamCount = intent.getIntExtra("currentTeamCount", 0);
+        String currentTeam = String.valueOf(currentTeamCount);
+        int teamCountInt = intent.getIntExtra("hackathonTeamCount", 0);
+        String teamCount = String.valueOf(teamCountInt);
 
         // Set data to the views
         hackathonName.setText(name);
-        hackathonVenue.setText("Venue: " + venue);
-        hackathonDate.setText("Date: " + date);
-        hackathonTeamCount.setText("Team Size: " + teamCount);
+        hackathonVenue.setText(" " + venue);
+        hackathonDate.setText(" " + date);
+        hackathonTeamCount.setText(" " + teamCount);
+        leaderNameTextView.setText(" " + leaderName);
+        currentTeamCountTextView.setText(" " + currentTeam);
 
         connectButton.setOnClickListener(view -> {
             // Change button color on click
