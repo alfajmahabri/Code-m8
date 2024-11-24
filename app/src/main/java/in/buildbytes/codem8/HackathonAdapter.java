@@ -51,6 +51,8 @@ public class HackathonAdapter extends RecyclerView.Adapter<HackathonAdapter.Hack
                 intent.putExtra("hackathonVenue", hackathon.getDataVenue());
                 intent.putExtra("hackathonDate", hackathon.getData_date());
                 intent.putExtra("hackathonTeamCount", hackathon.getData_count());
+                intent.putExtra("leaderName", hackathon.getLeaderName());
+                intent.putExtra("currentTeamCount", hackathon.getCurrentTeamCount());
                 context.startActivity(intent);
             }
         });

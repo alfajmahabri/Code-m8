@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class HackathonDetails extends AppCompatActivity {
     private TextView hackathonName, hackathonVenue, hackathonDate, hackathonTeamCount, leaderNameTextView, currentTeamCountTextView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,17 +30,15 @@ public class HackathonDetails extends AppCompatActivity {
         String date = intent.getStringExtra("hackathonDate");
         String leaderName = intent.getStringExtra("leaderName");
         int currentTeamCount = intent.getIntExtra("currentTeamCount", 0);
-        String currentTeam = String.valueOf(currentTeamCount);
-        int teamCountInt = intent.getIntExtra("hackathonTeamCount", 0);
-        String teamCount = String.valueOf(teamCountInt);
+        int teamCount = intent.getIntExtra("hackathonTeamCount", 0);
 
         // Set data to the views
         hackathonName.setText(name);
-        hackathonVenue.setText(" " + venue);
-        hackathonDate.setText(" " + date);
-        hackathonTeamCount.setText(" " + teamCount);
-        leaderNameTextView.setText(" " + leaderName);
-        currentTeamCountTextView.setText(" " + currentTeam);
+        hackathonVenue.setText(venue);
+        hackathonDate.setText(date);
+        hackathonTeamCount.setText(String.valueOf(teamCount));
+        leaderNameTextView.setText(leaderName);
+        currentTeamCountTextView.setText(String.valueOf(currentTeamCount));
 
         connectButton.setOnClickListener(view -> {
             // Change button color on click
