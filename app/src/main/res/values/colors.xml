@@ -4,4 +4,6 @@
     <color name="white">#FFFFFF</color>
     <color name="bg">#E8E8E8</color>
     <color name="fontcol">#2E2E2E</color>
+    <color name="colorPressed">#8FC9FF</color>
+    <color name="colorDefault">#262842</color>
 </resources>
