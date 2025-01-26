@@ -1,4 +1,4 @@
-# Code M8 ![Code M8 Logo](assests/CM8.png)
+# Code M8 <img src="assests/CM8.png" alt="Code M8 Logo" width="50" height="50">
 
 **Code M8** is a platform designed to simplify the team-building experience for hackathon participants. In the fast-paced and competitive environment of hackathons, finding the right teammates with complementary skills and interests can be challenging. Code M8 helps users connect with potential teammates, collaborate, and form teams based on shared goals and expertise.
 
