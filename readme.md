@@ -1,4 +1,4 @@
-<img src="assests/CM8.png" alt="Code M8 Logo" width="100" height="100"># Code M8
+<img src="assests/CM8.png" alt="Code M8 Logo" width="100" height="100"> # Code M8
 
 **Code M8** is a platform designed to simplify the team-building experience for hackathon participants. In the fast-paced and competitive environment of hackathons, finding the right teammates with complementary skills and interests can be challenging. Code M8 helps users connect with potential teammates, collaborate, and form teams based on shared goals and expertise.
 
@@ -22,11 +22,13 @@ By providing a space to post detailed team requirements, browse potential teamma
 ---
 
 ## Screenshots
-![Login Page](assests/1.jpg)
-![Code M8 Logo](assests/2.jpg)
-![Code M8 Logo](assests/3.jpg)
-![Code M8 Logo](assests/4.jpg)
-![Code M8 Logo](assests/5.jpg)
+
+<img src="assests/1.jpg" alt="Login Page" width="300" height="auto">
+<img src="assests/2.jpg" alt="Code M8 Screenshot" width="300" height="auto">
+<img src="assests/3.jpg" alt="Code M8 Screenshot" width="300" height="auto">
+<img src="assests/4.jpg" alt="Code M8 Screenshot" width="300" height="auto">
+<img src="assests/5.jpg" alt="Code M8 Screenshot" width="300" height="auto">
+
 ---
 
 ## Download APK
