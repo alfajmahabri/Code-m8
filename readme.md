@@ -1,7 +1,8 @@
-<div style="display: flex; align-items: center; justify-content: flex-start;">
+<div style="display: flex; align-items: center;">
   <img src="assests/CM8.png" alt="Code M8 Logo" width="100" height="100" style="margin-right: 10px;">
-  <h1 style="margin: 0; align-self: center;">Code M8</h1>
+  <h1 style="margin: 0; vertical-align: middle;">Code M8</h1>
 </div>
+
 
 
 **Code M8** is a platform designed to simplify the team-building experience for hackathon participants. In the fast-paced and competitive environment of hackathons, finding the right teammates with complementary skills and interests can be challenging. Code M8 helps users connect with potential teammates, collaborate, and form teams based on shared goals and expertise.
